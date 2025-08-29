@@ -40,7 +40,7 @@ O Jardim de Software é a organização que centraliza os repositórios criados 
 * **Templates**: front-end (Next.js), back-end (.NET/Spring/Node), infra (Terraform/Ansible), Dockerfiles etc.
 * **Projetos didáticos**: exercícios, exemplos de disciplinas e material para estudantes.
 * **Infra**: exemplos de configuração Proxmox, runners self-hosted, scripts de automação.
-* **Ferramentas da fábrica**: GitHub Actions, templates de issue/PR, geradores de repositório.
+* **Modelos**: GitHub Actions, templates de issue/PR, geradores de repositório.
 
 ## Como os projetos estao organizados
 
@@ -49,6 +49,28 @@ Padrões sugeridos para repositórios nesta organização:
 * `template-<tipo>-<nome>` — ex: `template-front-nextjs`, `template-back-spring`.
 * `proj-<nome>-<ano>` — projetos disciplinares ou entregas de turma.
 * `infra-<componente>` — scripts, playbooks e IaC (ex: `infra-proxmox`, `infra-runners`).
+* `Estrutura mínima de pastas e arquivos: `
+```
+/
+├── .github
+│
+├── backend/
+│   ├── Dockerfile
+│   └── (projetos e arquivos relacionados ao backend)
+│
+├── frontend/
+│   ├── Dockerfile
+│   └── (projetos e arquivos relacionados ao frontend)
+│
+├── config/
+│   └── Arquivos de configuração do projeto/aplicação  
+│
+├── .env.example
+├── .gitignore
+├── LICENSE
+├── README.md
+└── docker-compose.yml
+```
 
 Branches principais:
 
